@@ -65,7 +65,6 @@ func (s *Server) handleConnection(conn net.Conn) {
 	defer s.wg.Done()
 	defer conn.Close()
 
-	//TODO: create session package
 	session := NewSession(conn)
 	session.Start()
 }
